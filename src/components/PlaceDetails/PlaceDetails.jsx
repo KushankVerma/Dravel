@@ -38,7 +38,7 @@ const PlaceDetails = ({place, selected, refProp}) => {
          </Box>
         ))}
           {place?.cuisine?.map(({name}) => {
-              <chip key={name} size="small" label={name} className={classes.chip}/>
+              <Chip key={name} size="small" label={name} className={classes.chip}/>
           })}
             {place?.address && (
                 <Typography gutterBottom variant="body2" color="textSecondary" className={classes.subtitle}>
@@ -53,12 +53,12 @@ const PlaceDetails = ({place, selected, refProp}) => {
             )}
 
             <CardActions>
-                <button size="small" color="primary" onClick={() => window.open(place.web_url, '_blank')}>
+                <Button size="small" color="primary" onClick={() => window.open(place.web_url, '_blank')}>
                     Trip Advisor
-                </button>
-                <button size="small" color="primary" onClick={() => window.open(place.website, '_blank')}>
+                </Button>
+                <Button size="small" color="primary" onClick={() => window.open(place.website, '_blank')}>
                     Website
-                </button>
+                </Button>
 
 
             </CardActions>
